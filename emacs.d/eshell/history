@@ -1,0 +1,76 @@
+clear
+
+ls
+clear
+
+ipython3
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+ls
+$ANUVI_ROOT$
+$PATH$
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+clear
+
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+bash testrun.sh
+python3 orbiter.py 
+ipython3
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+python3 orbiter.py 
+bash testrun.sh
+python3 orbiter.py 
+python3 orbiter.py 
+ipython3
+ls
