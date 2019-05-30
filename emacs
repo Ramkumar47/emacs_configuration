@@ -70,3 +70,7 @@
 
 ;; removing scroll bar
 (scroll-bar-mode -1)
+
+;; removing menubar and tool bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
