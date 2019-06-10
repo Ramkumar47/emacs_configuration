@@ -20,7 +20,7 @@
  '(linum-format (quote dynamic))
  '(package-selected-packages
    (quote
-    (flymd markdown-preview-mode markdown-mode csv-mode ace-mc)))
+    (multiple-cursors flymd markdown-preview-mode markdown-mode csv-mode ace-mc)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "yamuna")
  '(smtpmail-smtp-service 25))
@@ -74,3 +74,6 @@
 ;; removing menubar and tool bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+
+;; enabling multiple-cursor mode
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)

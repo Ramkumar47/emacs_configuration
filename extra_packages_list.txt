@@ -1,0 +1,9 @@
+This list contains the additional packages that are to be installed
+after new emacs installation.
+The keybindings for these installations are already configured in
+".emacs" file
+
+* multiple-cursor
+  this enables multiple cursors
+* fly-md
+  this is for markdown mode
