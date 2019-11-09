@@ -14,13 +14,13 @@
  '(custom-enabled-themes (quote (klere)))
  '(custom-safe-themes
    (quote
-    ("01106b3f65273106fc4a6e155535049c658a608019257b60afef5e5c75a25c7b" "7feeed063855b06836e0262f77f5c6d3f415159a98a9676d549bfeb6c49637c4" "77bd459212c0176bdf63c1904c4ba20fce015f730f0343776a1a14432de80990" "2aa073a18b2ba860d24d2cd857bcce34d7107b6967099be646d9c95f53ef3643" "1ba61848d0d8c78e037867c26f118875705c20f5ad64949a8cee8c8059e5c50f" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "0e661090440d8281ccbf9416f1ec2a20e66a1bd9097c10b4e607e19c3e61f0a9" "4c8372c68b3eab14516b6ab8233de2f9e0ecac01aaa859e547f902d27310c0c3" "5dc8ea509d300f9b751fce3d94d9885d264c5bda240e90e884d48601955b3f8c" "f94616072300961ce1ff085247fbf31230bfe242686f8514c3f422ff6492c4cf" "5fcc2d6be64f80162cc1b987454748b82464b490cb16b017daa1499d23156904" "1884b12dbfa952664f1119bd6d89aaee77b35fbe3c3539381fbdc84a5bd907ef" "fd967bf5dec4496bef25576c139d9a394eaf914e1de62a996e30a4a8eff0a7af" default)))
+    ("ba913d12adb68e9dadf1f43e6afa8e46c4822bb96a289d5bf1204344064f041e" "01106b3f65273106fc4a6e155535049c658a608019257b60afef5e5c75a25c7b" "7feeed063855b06836e0262f77f5c6d3f415159a98a9676d549bfeb6c49637c4" "77bd459212c0176bdf63c1904c4ba20fce015f730f0343776a1a14432de80990" "2aa073a18b2ba860d24d2cd857bcce34d7107b6967099be646d9c95f53ef3643" "1ba61848d0d8c78e037867c26f118875705c20f5ad64949a8cee8c8059e5c50f" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" "a3fa4abaf08cc169b61dea8f6df1bbe4123ec1d2afeb01c17e11fdc31fc66379" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "0e661090440d8281ccbf9416f1ec2a20e66a1bd9097c10b4e607e19c3e61f0a9" "4c8372c68b3eab14516b6ab8233de2f9e0ecac01aaa859e547f902d27310c0c3" "5dc8ea509d300f9b751fce3d94d9885d264c5bda240e90e884d48601955b3f8c" "f94616072300961ce1ff085247fbf31230bfe242686f8514c3f422ff6492c4cf" "5fcc2d6be64f80162cc1b987454748b82464b490cb16b017daa1499d23156904" "1884b12dbfa952664f1119bd6d89aaee77b35fbe3c3539381fbdc84a5bd907ef" "fd967bf5dec4496bef25576c139d9a394eaf914e1de62a996e30a4a8eff0a7af" default)))
  '(fci-rule-color "#444444")
  '(fringe-mode 6 nil (fringe))
  '(linum-format (quote dynamic))
  '(package-selected-packages
    (quote
-    (multiple-cursors flymd markdown-preview-mode markdown-mode csv-mode ace-mc)))
+    (markdown-preview-eww markdown-mode+ multiple-cursors flymd markdown-preview-mode markdown-mode csv-mode ace-mc)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "yamuna")
  '(smtpmail-smtp-service 25))
@@ -94,3 +94,16 @@
   kept-new-versions 20   ; how many of the newest versions to keep
   kept-old-versions 5    ; and how many of the old
  )
+
+;; function definition for creating new empty buffer with its own keybinding
+(defun xah-new-empty-buffer ()
+  (interactive)
+  (let (($buf (generate-new-buffer "untitled")))
+    (switch-to-buffer $buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)
+    (setq initial-major-mode (quote text-mode))
+    $buf
+    ))
+
+(global-set-key (kbd "<f7>") 'xah-new-empty-buffer)
